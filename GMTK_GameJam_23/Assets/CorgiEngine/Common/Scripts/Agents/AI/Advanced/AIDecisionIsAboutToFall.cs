@@ -24,6 +24,7 @@ namespace MoreMountains.CorgiEngine
 		/// </summary>
 		public override void Initialization()
 		{
+			base.Initialization();
 			_controller = this.gameObject.GetComponentInParent<CorgiController>();
 			_character = this.gameObject.GetComponentInParent<Character>();
 		}
