@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b470d1b161b2454590386135b7fd64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterType: 1
+  CharacterType: 0
   PlayerID: 
   InitialFacingDirection: 1
   DirectionOnSpawn: 0
