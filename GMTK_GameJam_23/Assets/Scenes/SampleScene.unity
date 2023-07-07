@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 451582, guid: 6777bab8262a63f499e2e97188b5da02, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 451582, guid: 6777bab8262a63f499e2e97188b5da02, type: 3}
       propertyPath: m_LocalRotation.w
@@ -258,15 +258,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ace2d4bf56f98df4196ff81845a465d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -140.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ace2d4bf56f98df4196ff81845a465d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ace2d4bf56f98df4196ff81845a465d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: ace2d4bf56f98df4196ff81845a465d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -331,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7a343ffc127af4b41b1e509d55d21956, type: 3}
       propertyPath: m_LocalRotation.w
@@ -398,7 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fcac034e6398d42ac254095d9b2d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerPrefabs: []
+  PlayerPrefabs:
+  - {fileID: 7070861931959513359, guid: 11cc431241f4efe45b8ab1493861d1bb, type: 3}
   AutoAttributePlayerIDs: 1
   SceneCharacters: []
   DebugSpawn: {fileID: 0}
@@ -439,10 +440,10 @@ MonoBehaviour:
     Initialized: 0
   RespawnDelay: 2
   ResetPointsOnRestart: 1
-  BoundsMode: 1
+  BoundsMode: 0
   LevelBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 5, y: 5, z: 5}
+    m_Extent: {x: 14.89, y: 7.27, z: 5}
   ConvertToColliderBoundsButton: 0
   LoadingSceneMode: 1
   LoadingSceneName: LoadingScreen
