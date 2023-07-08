@@ -36,7 +36,10 @@ public class EditPlayModeButton : MonoBehaviour
 
 	public void OnButtonClicked()
 	{
-		playModeManager.TogglePlayMode();
+		if (playModeManager.playmode != PlayModeManager.PlayModeState.Victory)
+		{
+			playModeManager.TogglePlayMode();
+		}
 	}
 
 	private void UpdateButtonText()

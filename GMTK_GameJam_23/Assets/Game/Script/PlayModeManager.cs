@@ -8,7 +8,8 @@ public class PlayModeManager : MonoBehaviour
 	{
 		None,
 		BuildMode,
-		PlayMode
+		PlayMode,
+		Victory
 	}
 
 	// TODO: See if we need to consider pause menu
