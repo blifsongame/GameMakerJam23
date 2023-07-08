@@ -8,6 +8,8 @@ TagManager:
   - Music
   - Background
   - NoMask
+  - LevelEditorManager
+  - ItemImage
   layers:
   - Default
   - TransparentFX
