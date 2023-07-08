@@ -17,9 +17,14 @@ public class SpawnedItem : MonoBehaviour
 	{
 		if(Input.GetMouseButtonDown(1))
 		{
-            Destroy(this.gameObject);
-            editor.ItemButtons[ID].quantity++;
-            editor.ItemButtons[ID].quantityText.text = editor.ItemButtons[ID].quantity.ToString();
-		}
+            DestroyAndUpdateEditor();
+        }
 	}
+
+    public void DestroyAndUpdateEditor()
+	{
+        Destroy(this.gameObject);
+        editor.ItemButtons[ID].quantity++;
+        editor.ItemButtons[ID].quantityText.text = editor.ItemButtons[ID].quantity.ToString();
+    }
 }

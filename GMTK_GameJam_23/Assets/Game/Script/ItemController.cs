@@ -33,8 +33,6 @@ public class ItemController : MonoBehaviour
             Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
             Instantiate(editor.ItemImages[ID], new Vector3(worldPosition.x, worldPosition.y, 0f), Quaternion.identity);
 
-
-
             Clicked = true;
             quantity--;
             quantityText.text = quantity.ToString();
