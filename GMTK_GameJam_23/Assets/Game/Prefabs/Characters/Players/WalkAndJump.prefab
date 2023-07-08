@@ -333,6 +333,8 @@ GameObject:
   - component: {fileID: 970422707100929021}
   - component: {fileID: 970422707100929020}
   - component: {fileID: 9209903427945182910}
+  - component: {fileID: 5299143623366046644}
+  - component: {fileID: 3082955880085205714}
   m_Layer: 9
   m_Name: WalkAndJump
   m_TagString: Untagged
@@ -532,7 +534,7 @@ MonoBehaviour:
   CharacterType: 1
   PlayerID: 
   InitialFacingDirection: 1
-  DirectionOnSpawn: 0
+  DirectionOnSpawn: 2
   CharacterAnimator: {fileID: 970422708692617516}
   UseDefaultMecanim: 1
   PerformAnimatorSanityChecks: 1
@@ -1172,6 +1174,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91afb5e8874bcd4409571f25549d622c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5299143623366046644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970422708692617472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65df22587a4168b408ec58a9e2806c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  InputName: Stop_Movement
+--- !u!114 &3082955880085205714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970422708692617472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85eb3ed719cef3c4fbc675dd6e2cf220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputName: Stop_Movement
 --- !u!1 &6402773366924555919
 GameObject:
   m_ObjectHideFlags: 0
