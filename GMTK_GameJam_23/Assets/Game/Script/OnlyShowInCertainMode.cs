@@ -13,6 +13,13 @@ public class OnlyShowInCertainMode : MonoBehaviour
 	[SerializeField]
 	private PlayModeManager manager = null;
 
+	private void Start()
+	{
+		if (manager == null)
+		{
+			manager = FindObjectOfType<PlayModeManager>();
+		}
+	}
 
 
 	private void OnEnable()

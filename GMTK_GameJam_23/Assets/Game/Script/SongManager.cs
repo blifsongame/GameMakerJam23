@@ -10,10 +10,15 @@ public class SongManager : MonoBehaviour
 
 	public AudioSource playModeAudioSource;
 	public AudioSource buildModeAudioSource;
-	
+	public AudioSource otherAudioSource;
 
 	private PlayModeManager.PlayModeState playmode = PlayModeManager.PlayModeState.None;
 
+	private void Awake()
+	{
+		if (otherAudioSource == null)
+			otherAudioSource = GetComponent<AudioSource>();
+	}
 	private void Start()
 	{
 		playModeAudioSource.mute = true;
@@ -51,14 +56,44 @@ public class SongManager : MonoBehaviour
 
 	private void PlayBuildModeAudio()
 	{
+		if (!playModeAudioSource.isPlaying)
+		{
+			playModeAudioSource.Play();
+		}
 		playModeAudioSource.mute = true;
+
+		
+		if (!buildModeAudioSource.isPlaying)
+		{
+			buildModeAudioSource.Play();
+		}
 		buildModeAudioSource.mute = false;
+
+		if (otherAudioSource.isPlaying)
+		{
+			otherAudioSource.Stop();
+		}
 	}
 
 	private void PlayPlayModeAudio() // Bad name. Oh well
 	{
+		if (!playModeAudioSource.isPlaying)
+		{
+			playModeAudioSource.Play();
+		}
 		playModeAudioSource.mute = false;
+
+		
+		if (!buildModeAudioSource.isPlaying)
+		{
+			buildModeAudioSource.Play();
+		}
 		buildModeAudioSource.mute = true;
+
+		if (otherAudioSource.isPlaying)
+		{
+			otherAudioSource.Stop();
+		}
 	}
 
 	private void UpdateMusic(PlayModeManager.PlayModeState playmode)

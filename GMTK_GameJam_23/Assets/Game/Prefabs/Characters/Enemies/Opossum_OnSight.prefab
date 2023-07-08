@@ -351,7 +351,7 @@ MonoBehaviour:
   DelayBeforeDestruction: 0
   CollisionsOffOnDeath: 1
   GravityOffOnDeath: 0
-  PointsWhenDestroyed: 0
+  PointsWhenDestroyed: 1
   RespawnAtInitialLocation: 0
   ApplyDeathForce: 1
   DeathForce: {x: 0, y: 10}
