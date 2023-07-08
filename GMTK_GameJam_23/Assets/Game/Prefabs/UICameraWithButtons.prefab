@@ -592,7 +592,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 49.999878, y: -0.000030517578}
-  m_SizeDelta: {x: 202.24, y: 100}
+  m_SizeDelta: {x: 230.7, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6289849950715708720
 CanvasRenderer:
@@ -743,7 +743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 764, y: 477.67}
+  m_AnchoredPosition: {x: 812, y: 477.67}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5341361751209352989
@@ -1231,7 +1231,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 77.68, y: -1.09}
-  m_SizeDelta: {x: 112.08, y: 52.17}
+  m_SizeDelta: {x: 146.68, y: 52.17}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3686892890186485207
 CanvasRenderer:
@@ -1263,8 +1263,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: L-Shift to Stop
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e7ea3bf6004773842ab238e129776162, type: 2}
+  m_sharedMaterial: {fileID: -4660452323114786092, guid: e7ea3bf6004773842ab238e129776162,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1383,6 +1384,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: ace2d4bf56f98df4196ff81845a465d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 122846, guid: ace2d4bf56f98df4196ff81845a465d7, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1446,6 +1451,10 @@ PrefabInstance:
     - target: {fileID: 22460478, guid: ace2d4bf56f98df4196ff81845a465d7, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -229
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010455131338, guid: ace2d4bf56f98df4196ff81845a465d7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ace2d4bf56f98df4196ff81845a465d7, type: 3}

@@ -53,6 +53,7 @@ public class LevelEditorManager : MonoBehaviour
 	{
 		for (int i = 0; i < allSpawnedItems.Count; i++)
 		{
+			//if (allSpawnedItems[i].gameObject.transfo)
 			allSpawnedItems[i].DestroyAndUpdateEditor();
 		}
 		allSpawnedItems.Clear();
