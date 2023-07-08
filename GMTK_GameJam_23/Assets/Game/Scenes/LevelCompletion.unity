@@ -836,6 +836,11 @@ PrefabInstance:
     - target: {fileID: 7668831289250008777, guid: 03132f8fb324b584eba55c6d9cf2568a,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668831289250008777, guid: 03132f8fb324b584eba55c6d9cf2568a,
+        type: 3}
+      propertyPath: WalkBehaviour
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2525,11 +2530,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4235953149796112362, guid: ce790eb775d167d4c8662e9227cfc0c9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 4789644718322583032, guid: ce790eb775d167d4c8662e9227cfc0c9,
         type: 3}
       propertyPath: buttonText
       value: 
       objectReference: {fileID: 933205214}
+    - target: {fileID: 4799020264845402654, guid: ce790eb775d167d4c8662e9227cfc0c9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341361751209352989, guid: ce790eb775d167d4c8662e9227cfc0c9,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 102738298}
     - target: {fileID: 5571425265694028821, guid: ce790eb775d167d4c8662e9227cfc0c9,
         type: 3}
       propertyPath: m_Name

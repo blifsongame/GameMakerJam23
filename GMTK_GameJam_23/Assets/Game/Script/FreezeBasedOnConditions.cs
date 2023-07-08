@@ -31,7 +31,6 @@ public class FreezeBasedOnConditions : MMMonoBehaviour
 			if (isFrozen != value)
 			{
 				isFrozen = value;
-				Debug.Log($"Freeze = {isFrozen}");
 				if (isFrozen)
 				{
 					_character.Freeze();
