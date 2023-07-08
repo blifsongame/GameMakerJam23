@@ -16,7 +16,7 @@ public class ResetItemControllers : MonoBehaviour
 
     public void ButtonClicked()
 	{
-        if (playModeManager.playmode == PlayModeManager.PlayMode.BuildMode)
+        if (playModeManager.playmode == PlayModeManager.PlayModeState.BuildMode)
 		{
             editor.ResetAllSpawnedItems();
         }

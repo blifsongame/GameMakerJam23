@@ -20,7 +20,7 @@ public class LevelEditorManager : MonoBehaviour
 
 	private void Update()
 	{
-		if (playModeManager.playmode != PlayModeManager.PlayMode.BuildMode)
+		if (playModeManager.playmode != PlayModeManager.PlayModeState.BuildMode)
 		{
 			return;
 		}

@@ -1103,8 +1103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Label: 
-  AfterTimeMin: 1
-  AfterTimeMax: 3
+  AfterTimeMin: 0.5
+  AfterTimeMax: 0.75
 --- !u!114 &970422708692617501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,7 +1200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85eb3ed719cef3c4fbc675dd6e2cf220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FreezeIfStopInput: 1
   InputName: Stop_Movement
+  FreezeIfNotInPlayMode: 1
 --- !u!1 &6402773366924555919
 GameObject:
   m_ObjectHideFlags: 0

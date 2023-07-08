@@ -17,7 +17,7 @@ public class SpawnedItem : MonoBehaviour
 
 	private void OnMouseOver()
 	{
-		if(Input.GetMouseButtonDown(1) && playModeManager.playmode == PlayModeManager.PlayMode.BuildMode)
+		if(Input.GetMouseButtonDown(1) && playModeManager.playmode == PlayModeManager.PlayModeState.BuildMode)
 		{
             DestroyAndUpdateEditor();
         }

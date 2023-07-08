@@ -29,7 +29,7 @@ public class ItemController : MonoBehaviour
 
     public void ButtonClicked()
 	{
-        if (playModeManager.playmode == PlayModeManager.PlayMode.BuildMode && quantity > 0)
+        if (playModeManager.playmode == PlayModeManager.PlayModeState.BuildMode && quantity > 0)
 		{
             Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
