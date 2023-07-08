@@ -11,6 +11,7 @@ public class ItemController : MonoBehaviour
     public TextMeshProUGUI quantityText;
     public bool Clicked = false;
     private LevelEditorManager editor;
+    private PlayModeManager playModeManager;
 
     private int maxQuantity;
 
@@ -23,15 +24,17 @@ public class ItemController : MonoBehaviour
     {
         quantityText.text = quantity.ToString();
         editor = GameObject.FindGameObjectWithTag("LevelEditorManager").GetComponent<LevelEditorManager>();
+        playModeManager = PlayModeManager.Instance;
     }
 
     public void ButtonClicked()
 	{
-        if (quantity > 0)
+        if (playModeManager.playmode == PlayModeManager.PlayMode.BuildMode && quantity > 0)
 		{
             Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
-            Instantiate(editor.ItemImages[ID], new Vector3(worldPosition.x, worldPosition.y, 0f), Quaternion.identity);
+            Vector2 snappedPosition = new Vector2(Mathf.RoundToInt(worldPosition.x), Mathf.RoundToInt(worldPosition.y));
+            Instantiate(editor.ItemImages[ID], new Vector3(snappedPosition.x, snappedPosition.y, 0f), Quaternion.identity);
 
             Clicked = true;
             quantity--;

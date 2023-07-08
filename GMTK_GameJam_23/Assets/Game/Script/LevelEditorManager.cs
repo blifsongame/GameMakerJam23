@@ -11,15 +11,30 @@ public class LevelEditorManager : MonoBehaviour
 
 	private List<SpawnedItem> allSpawnedItems = new();
 
+	private PlayModeManager playModeManager;
+
+	private void Start()
+	{
+		playModeManager = PlayModeManager.Instance;
+	}
+
 	private void Update()
 	{
+		if (playModeManager.playmode != PlayModeManager.PlayMode.BuildMode)
+		{
+			return;
+		}
+
 		Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 		Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+
+		// Snap
+		Vector2 snappedPosition = new Vector2(Mathf.RoundToInt(worldPosition.x), Mathf.RoundToInt(worldPosition.y));
 
 		if(Input.GetMouseButtonDown(0) && ItemButtons[CurrentButtonPressed].Clicked)
 		{
 			ItemButtons[CurrentButtonPressed].Clicked = false;
-			var spawnedObj = Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(worldPosition.x, worldPosition.y, 0f), Quaternion.identity);
+			var spawnedObj = Instantiate(ItemPrefabs[CurrentButtonPressed], new Vector3(snappedPosition.x, snappedPosition.y, 0f), Quaternion.identity);
 
 			var spawnedItem = spawnedObj.GetComponent<SpawnedItem>();
 			if (spawnedItem == null)

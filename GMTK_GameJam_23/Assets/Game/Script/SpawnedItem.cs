@@ -6,16 +6,18 @@ public class SpawnedItem : MonoBehaviour
 {
     public int ID;
     private LevelEditorManager editor;
+    private PlayModeManager playModeManager;
 
     // Start is called before the first frame update
     void Start()
     {
         editor = GameObject.FindGameObjectWithTag("LevelEditorManager").GetComponent<LevelEditorManager>();
+        playModeManager = PlayModeManager.Instance;
     }
 
 	private void OnMouseOver()
 	{
-		if(Input.GetMouseButtonDown(1))
+		if(Input.GetMouseButtonDown(1) && playModeManager.playmode == PlayModeManager.PlayMode.BuildMode)
 		{
             DestroyAndUpdateEditor();
         }

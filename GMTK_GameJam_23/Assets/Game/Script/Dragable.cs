@@ -1,42 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Dragable : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class Dragable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-	// TODO: Have check if drag is allowed
-
+	private RectTransform rectTransform;
+	private Image image;
 
 	public void OnBeginDrag(PointerEventData eventData)
 	{
-		Debug.Log("On Begin Drag");
+		image.color = new Color32(255, 255, 255, 170);
 	}
 
 	public void OnDrag(PointerEventData eventData)
 	{
-		Debug.Log("On Drag");
+		rectTransform.anchoredPosition += eventData.delta;
 	}
 
 	public void OnEndDrag(PointerEventData eventData)
 	{
-		Debug.Log("On End Drag");
+		image.color = new Color32(255, 255, 255, 255);
 	}
 
-	public void OnPointerDown(PointerEventData eventData)
+	private void Start()
 	{
-		Debug.Log("On Pointer Down");
+		rectTransform = GetComponent<RectTransform>();
+		image = GetComponent<Image>();
 	}
-
-	// Start is called before the first frame update
-	void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
