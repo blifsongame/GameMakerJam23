@@ -28,7 +28,15 @@ public class RemainingEnemyCounter : MonoBehaviour
 			if (objectiveManager.RemainingEnemeies != remain)
 			{
 				remain = objectiveManager.RemainingEnemeies;
-				textMesh.text = $"Remaining Enemies: {(remain <= 0 ? "None" : $"{remain}")}";
+
+				if (remain <= 0)
+				{
+					textMesh.text = "Go to Goal";
+				}
+				else
+				{
+					textMesh.text = $"Remaining Enemies: {remain}";
+				}
 			}
 		}
 	}
