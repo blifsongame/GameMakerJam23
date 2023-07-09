@@ -16,10 +16,26 @@ public class EditPlayModeButton : MonoBehaviour
 	[SerializeField]
 	private Color playModeColor;
 
+	[SerializeField]
+	private AudioClip buildSFX;
+
+	[SerializeField]
+	private AudioClip playSFX;
+
+	private AudioSource audioSource;
+
+	private void Awake()
+	{
+		audioSource = gameObject.GetComponent<AudioSource>();
+	}
+
 	private void Start()
 	{
 		if (playModeManager == null)
-		playModeManager = PlayModeManager.Instance;
+		{
+			playModeManager = PlayModeManager.Instance;
+		}
+		
 	}
 
 	private void OnEnable()
@@ -61,10 +77,12 @@ public class EditPlayModeButton : MonoBehaviour
 			case PlayModeManager.PlayModeState.BuildMode:
 				buttonText.text = "BUILD MODE";
 				buttonText.color = buildModeColor;
+				audioSource.PlayOneShot(buildSFX);
 				break;
 			case PlayModeManager.PlayModeState.PlayMode:
 				buttonText.text = "PLAY MODE";
 				buttonText.color = playModeColor;
+				audioSource.PlayOneShot(playSFX);
 				break;
 		}
 	}
