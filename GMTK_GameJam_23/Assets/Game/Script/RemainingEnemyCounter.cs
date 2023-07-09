@@ -24,7 +24,6 @@ public class RemainingEnemyCounter : MonoBehaviour
 	{
 		if (objectiveManager != null)
 		{
-			Debug.Log($"Remain {objectiveManager.RemainingEnemeies}");
 			if (objectiveManager.RemainingEnemeies != remain)
 			{
 				remain = objectiveManager.RemainingEnemeies;

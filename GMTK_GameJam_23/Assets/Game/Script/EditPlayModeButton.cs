@@ -10,8 +10,15 @@ public class EditPlayModeButton : MonoBehaviour
 	[SerializeField]
 	private TextMeshProUGUI buttonText;
 
+	[SerializeField]
+	private Color buildModeColor;
+
+	[SerializeField]
+	private Color playModeColor;
+
 	private void Start()
 	{
+		if (playModeManager == null)
 		playModeManager = PlayModeManager.Instance;
 	}
 
@@ -53,9 +60,11 @@ public class EditPlayModeButton : MonoBehaviour
 		{
 			case PlayModeManager.PlayModeState.BuildMode:
 				buttonText.text = "BUILD MODE";
+				buttonText.color = buildModeColor;
 				break;
 			case PlayModeManager.PlayModeState.PlayMode:
 				buttonText.text = "PLAY MODE";
+				buttonText.color = playModeColor;
 				break;
 		}
 	}

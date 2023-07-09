@@ -70,6 +70,11 @@ public class PlayModeManager : MonoBehaviour, MMEventListener<CorgiEngineEvent>
 		this.playmode = playmode;
 		OnPlayModeChanged?.Invoke(this.playmode);
 	}
+
+	public void SetVictory()
+	{
+		SetPlayMode(PlayModeState.Victory);
+	}
 	
 	public virtual void OnMMEvent(CorgiEngineEvent corgiEngineEvent)
 	{

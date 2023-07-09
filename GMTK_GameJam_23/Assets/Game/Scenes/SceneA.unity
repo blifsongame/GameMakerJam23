@@ -1706,6 +1706,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1726535782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7633917130981823529, guid: 94deb86dcd423634cb634367ed8bb98c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7633917130567580105}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164a6dc3482822a44ad397569efe58b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1728060410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1898,6 +1910,27 @@ Transform:
   m_Father: {fileID: 1573417344}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2023582776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2969132703467188955, guid: ce790eb775d167d4c8662e9227cfc0c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 6123968975349870897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2023582782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023582776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f25efdc856de9c4ca8cde5e5851ea07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showStates: 000000000100000002000000
+  visualRoot: {fileID: 2023582776}
+  manager: {fileID: 0}
 --- !u!1 &2093384843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,6 +2382,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelExit
       objectReference: {fileID: 0}
+    - target: {fileID: 3098520282263640385, guid: 7932fe02236ce56409d338df88261e26,
+        type: 3}
+      propertyPath: OnActivation.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1726535782}
+    - target: {fileID: 3098520282263640385, guid: 7932fe02236ce56409d338df88261e26,
+        type: 3}
+      propertyPath: OnActivation.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 102738298}
     - target: {fileID: 3098520282263640388, guid: 7932fe02236ce56409d338df88261e26,
         type: 3}
       propertyPath: m_RootOrder
@@ -2427,11 +2470,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 203.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 2969132703467188955, guid: ce790eb775d167d4c8662e9227cfc0c9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4235953149796112362, guid: ce790eb775d167d4c8662e9227cfc0c9,
         type: 3}
@@ -2517,6 +2555,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 85.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174816887768100512, guid: ce790eb775d167d4c8662e9227cfc0c9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7967607699818836536, guid: ce790eb775d167d4c8662e9227cfc0c9,
         type: 3}
