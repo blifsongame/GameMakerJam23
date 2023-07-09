@@ -23,7 +23,7 @@ public class SongManager : MonoBehaviour
 	private void Start()
 	{
 		playModeAudioSource.mute = true;
-		buildModeAudioSource.mute = true;
+		buildModeAudioSource.mute = false;
 	}
 
 	private void OnEnable()
