@@ -7,7 +7,7 @@ using TMPro;
 public class AdviceMsg : MonoBehaviour
 {
 	public TextMeshProUGUI textMesh;
-	private PlayModeManager playModeManager;
+	//private PlayModeManager playModeManager;
 
 	private PlayModeManager.PlayModeState state = PlayModeManager.PlayModeState.None;
 
@@ -20,7 +20,7 @@ public class AdviceMsg : MonoBehaviour
 				state = PlayModeManager.Instance.playmode;
 				if (state == PlayModeManager.PlayModeState.BuildMode)
 				{
-					textMesh.text = "L-Shift to Stop";
+					textMesh.text = "L-Click to Place\nR-Click to Remove";
 				}
 				else if (state == PlayModeManager.PlayModeState.PlayMode)
 				{

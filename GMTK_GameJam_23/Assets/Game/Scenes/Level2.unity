@@ -140,6 +140,36 @@ PrefabInstance:
       propertyPath: LevelName
       value: Title
       objectReference: {fileID: 0}
+    - target: {fileID: 3098520282263640385, guid: 7932fe02236ce56409d338df88261e26,
+        type: 3}
+      propertyPath: OnActivation.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 102738298}
+    - target: {fileID: 3098520282263640385, guid: 7932fe02236ce56409d338df88261e26,
+        type: 3}
+      propertyPath: OnActivation.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 220108189}
+    - target: {fileID: 3098520282263640385, guid: 7932fe02236ce56409d338df88261e26,
+        type: 3}
+      propertyPath: OnActivation.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetVictory
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098520282263640385, guid: 7932fe02236ce56409d338df88261e26,
+        type: 3}
+      propertyPath: OnActivation.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayVictoryMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098520282263640385, guid: 7932fe02236ce56409d338df88261e26,
+        type: 3}
+      propertyPath: OnActivation.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayModeManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098520282263640385, guid: 7932fe02236ce56409d338df88261e26,
+        type: 3}
+      propertyPath: OnActivation.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SongManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3098520282263640388, guid: 7932fe02236ce56409d338df88261e26,
         type: 3}
       propertyPath: m_RootOrder
@@ -4205,6 +4235,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 220108187}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &220108189 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4458218452291045478, guid: d05d9c92845a4e74490a34dab3fb58ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 220108187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164a6dc3482822a44ad397569efe58b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &388942523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4263,6 +4305,22 @@ PrefabInstance:
     - target: {fileID: 2022988, guid: 6777bab8262a63f499e2e97188b5da02, type: 3}
       propertyPath: orthographic size
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022988, guid: 6777bab8262a63f499e2e97188b5da02, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022988, guid: 6777bab8262a63f499e2e97188b5da02, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.8039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022988, guid: 6777bab8262a63f499e2e97188b5da02, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.7529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022988, guid: 6777bab8262a63f499e2e97188b5da02, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.48235294
       objectReference: {fileID: 0}
     - target: {fileID: 11420014, guid: 6777bab8262a63f499e2e97188b5da02, type: 3}
       propertyPath: MaximumZoom
@@ -5965,6 +6023,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: b8b0ed39a04c3cc47895fef6a5ba808d, type: 3}
   - {fileID: 100000, guid: 86ed7338d560c8c46856024fe69e0958, type: 3}
   CurrentButtonPressed: 0
+  buildSFX: {fileID: 0}
 --- !u!1 &857871937
 GameObject:
   m_ObjectHideFlags: 0
@@ -13082,7 +13141,7 @@ PrefabInstance:
     - target: {fileID: 6123968976165949444, guid: ce790eb775d167d4c8662e9227cfc0c9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -28.000137
+      value: -28.000122
       objectReference: {fileID: 0}
     - target: {fileID: 8360910228540602007, guid: ce790eb775d167d4c8662e9227cfc0c9,
         type: 3}
