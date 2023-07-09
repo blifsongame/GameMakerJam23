@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreMountains.Tools;
+using MoreMountains.CorgiEngine;
 
-public class PlayModeManager : MonoBehaviour
-{
+public class PlayModeManager : MonoBehaviour, MMEventListener<CorgiEngineEvent>
+{ 
     public enum PlayModeState
 	{
 		None,
@@ -68,4 +70,22 @@ public class PlayModeManager : MonoBehaviour
 		this.playmode = playmode;
 		OnPlayModeChanged?.Invoke(this.playmode);
 	}
+	
+	public virtual void OnMMEvent(CorgiEngineEvent corgiEngineEvent)
+	{
+		switch (corgiEngineEvent.EventType)
+		{
+			case CorgiEngineEventTypes.LevelComplete:
+			case CorgiEngineEventTypes.LevelEnd:
+				SetPlayMode(PlayModeState.Victory);
+				break;
+			case CorgiEngineEventTypes.LevelStart:
+				if (playmode == PlayModeState.Victory)
+				{
+					SetPlayMode(PlayModeState.BuildMode);
+				}
+				break;
+		}
+	}
+	
 }

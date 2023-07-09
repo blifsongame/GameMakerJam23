@@ -11,6 +11,7 @@ public class SongManager : MonoBehaviour
 	public AudioSource playModeAudioSource;
 	public AudioSource buildModeAudioSource;
 	public AudioSource otherAudioSource;
+	public AudioClip victoryTheme;
 
 	private PlayModeManager.PlayModeState playmode = PlayModeManager.PlayModeState.None;
 
@@ -31,28 +32,10 @@ public class SongManager : MonoBehaviour
 		UpdateMusic(playModeManager.playmode);
 	}
 
-	// This is a cheat way to do it, but fast
-
-	/*
-	public void PlayBuildModeAudio()
+	private void OnDisable()
 	{
-		int timesamples = audioSource.timeSamples;
-		audioSource.Stop();
-		audioSource.clip = buildModeAudioClip;
-		audioSource.timeSamples = timesamples;
-		audioSource.Play();
-		
+		playModeManager.OnPlayModeChanged -= UpdateMusic;
 	}
-
-	public void PlayPlayModeAudio() // Bad name, but whatever
-	{
-		int timesamples = audioSource.timeSamples;
-		audioSource.Stop();
-		audioSource.clip = playModeAudioClip;
-		audioSource.timeSamples = timesamples;
-		audioSource.Play();
-	}
-	*/
 
 	private void PlayBuildModeAudio()
 	{
@@ -94,6 +77,14 @@ public class SongManager : MonoBehaviour
 		{
 			otherAudioSource.Stop();
 		}
+	}
+
+	public void PlayVictoryMusic()
+	{
+		buildModeAudioSource.Stop();
+		playModeAudioSource.Stop();
+		otherAudioSource.loop = false;
+		otherAudioSource.PlayOneShot(victoryTheme);
 	}
 
 	private void UpdateMusic(PlayModeManager.PlayModeState playmode)

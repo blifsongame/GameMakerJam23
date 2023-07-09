@@ -352,6 +352,7 @@ MonoBehaviour:
   playModeAudioSource: {fileID: 7633917130273796681}
   buildModeAudioSource: {fileID: 7633917130328168262}
   otherAudioSource: {fileID: 7633917130981823528}
+  victoryTheme: {fileID: 8300000, guid: e9b8c0a12634f09469b6a2921d4bd4b8, type: 3}
 --- !u!82 &7633917130981823528
 AudioSource:
   m_ObjectHideFlags: 0

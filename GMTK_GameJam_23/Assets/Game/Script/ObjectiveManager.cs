@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using MoreMountains.CorgiEngine;
+using MoreMountains.Feedbacks;
+using MoreMountains.InventoryEngine;
+using MoreMountains.Tools;
 
 public class ObjectiveManager : MonoBehaviour
 {
@@ -47,8 +50,4 @@ public class ObjectiveManager : MonoBehaviour
 			}
 		}
 	}
-
-
-
-	
 }

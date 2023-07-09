@@ -21,7 +21,7 @@ public class OnlyShowInCertainMode : MonoBehaviour
 		}
 	}
 
-
+	/*
 	private void OnEnable()
 	{
 		manager.OnPlayModeChanged += UpdateBasedOnState;
@@ -31,6 +31,12 @@ public class OnlyShowInCertainMode : MonoBehaviour
 	private void OnDisable()
 	{
 		manager.OnPlayModeChanged -= UpdateBasedOnState;
+		UpdateBasedOnState();
+	}
+	*/
+
+	private void Update()
+	{
 		UpdateBasedOnState();
 	}
 
