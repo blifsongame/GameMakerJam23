@@ -53,6 +53,7 @@ namespace MoreMountains.CorgiEngine
 	[AddComponentMenu("Corgi Engine/Character/Core/Health")]
 	public class Health : MMMonoBehaviour, MMEventListener<HealthDeathEvent>
 	{
+		
 		[MMInspectorGroup("Status", true, 1)]
 		
 		/// the current health of the character
@@ -72,7 +73,10 @@ namespace MoreMountains.CorgiEngine
 			MoreMountains.Tools.MMInformationAttribute.InformationType.Info, false)]
 		
 		[MMInspectorGroup("Health", true, 2)]
-		
+		[SerializeField]
+		public AudioClip deathSFX;
+
+
 		/// the initial amount of health of the object
 		[Tooltip("the initial amount of health of the object")]
 		public float InitialHealth = 10;
@@ -534,11 +538,21 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
+		private AudioSource audioSource;
+
 		/// <summary>
 		/// Kills the character, instantiates death effects, handles points, etc
 		/// </summary>
 		public virtual void Kill()
 		{
+			if (deathSFX != null)
+			{
+				if (audioSource == null)
+				{
+					audioSource = gameObject.AddComponent<AudioSource>();
+				}
+				audioSource.PlayOneShot(deathSFX);
+			}
 			if (ImmuneToDamage)
 			{
 				return;
@@ -564,6 +578,8 @@ namespace MoreMountains.CorgiEngine
 
 			// instantiates the destroy effect
 			DeathFeedbacks?.PlayFeedbacks();
+
+
 
 			// Adds points if needed.
 			if (PointsWhenDestroyed != 0)
