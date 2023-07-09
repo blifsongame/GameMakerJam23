@@ -10,6 +10,8 @@ namespace MoreMountains.CorgiEngine
 	[AddComponentMenu("Corgi Engine/Character/Damage/Kill Player on Touch")] 
 	public class KillPlayerOnTouch : CorgiMonoBehaviour 
 	{
+		public bool killAnyone = false;
+
 		/// <summary>
 		/// When a collision is triggered, check if the thing colliding is actually the player. If yes, kill it.
 		/// </summary>
@@ -23,7 +25,7 @@ namespace MoreMountains.CorgiEngine
 				return;
 			}
 			
-			if (character.CharacterType != Character.CharacterTypes.Player)
+			if (character.CharacterType != Character.CharacterTypes.Player && !killAnyone)
 			{
 				return;
 			}
