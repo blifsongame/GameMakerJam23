@@ -181,7 +181,7 @@ namespace MoreMountains.Tools
 		protected virtual void LoadingComplete() 
 		{
 			LoadingSceneEvent.Trigger(_sceneToLoad, LoadingStatus.InterpolatedLoadProgressComplete);
-			LoadingCompleteAnimation.gameObject.SetActive(true);
+			//LoadingCompleteAnimation.gameObject.SetActive(true);
 			StartCoroutine(MMFade.FadeCanvasGroup(LoadingProgressBar,0.1f,0f));
 			StartCoroutine(MMFade.FadeCanvasGroup(LoadingAnimation,0.1f,0f));
 			StartCoroutine(MMFade.FadeCanvasGroup(LoadingCompleteAnimation,0.1f,1f));
