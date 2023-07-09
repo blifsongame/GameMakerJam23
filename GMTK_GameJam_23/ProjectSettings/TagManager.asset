@@ -62,6 +62,9 @@ TagManager:
   - name: Foreground
     uniqueID: 1795597123
     locked: 0
+  - name: Player Front
+    uniqueID: 1475161063
+    locked: 0
   - name: VisibleParticles
     uniqueID: 940224915
     locked: 0
