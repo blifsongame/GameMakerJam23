@@ -27,6 +27,9 @@ namespace MoreMountains.CorgiEngine
 			CanJumpAnywhereAnyNumberOfTimes
 		}
 
+		private AudioSource audioSource;
+		public AudioClip jumpSFX;
+
 		[Header("Jump Behaviour")]
 
 		/// the maximum number of jumps allowed (0 : no jump, 1 : normal jump, 2 : double jump, etc...)
@@ -523,7 +526,20 @@ namespace MoreMountains.CorgiEngine
 			// we make the character jump
 			_controller.SetVerticalForce(Mathf.Sqrt( 2f * JumpHeight * Mathf.Abs(_controller.Parameters.Gravity) ));
 			JumpHappenedThisFrame = true;
+
+			if (audioSource == null && jumpSFX != null)
+			{
+				audioSource = gameObject.AddComponent<AudioSource>();
+			}
+
+			if (jumpSFX != null)
+			{
+				audioSource.loop = false;
+				audioSource.PlayOneShot(jumpSFX);
+			}
 		}
+
+		
 
 		/// <summary>
 		/// Use this method, from any class, to prevent the current jump from being proportional (releasing won't cancel the jump/current momentum)
